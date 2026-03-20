@@ -258,13 +258,12 @@ section {
     will-change: transform;
     cursor: pointer;
     border: 1px solid rgba(255,255,255,0.1);
-    transform: translateZ(0);
 }
 
 .cards-column .about-card:hover {
-    transform: translateY(-8px) !important;
-    background-color: #2c2c31 !important;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3) !important;
+    transform: translateY(-8px);
+    background-color: #2c2c31;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 /* Ícone */
@@ -289,18 +288,8 @@ section {
     margin: 0   ;
 }
 
-/* --- Animação de Revelação (Reutilizada) --- */
-/* Você já tem essa classe .reveal no seu style.css, certifique-se de que ela esteja lá. */
-.reveal {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.5s ease;
-}
-
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+/* --- Animação de Revelação --- */
+/* Definição única centralizada abaixo, perto dos estilos de projects */
 
 /* --- Responsividade --- */
 @media (max-width: 968px) {
@@ -345,7 +334,7 @@ section {
     margin-bottom: 3rem;
 }
 
-.section-title {
+.section-header .section-title {
     font-size: 3rem;
     text-align: left;
     font-weight: 500;
@@ -381,11 +370,6 @@ section {
     height: auto;
     min-height: 300px;
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-10px) !important;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3) !important;
 }
 
 /* Container da Imagem */
@@ -450,21 +434,32 @@ section {
 
 /* Hover nos Cards */
 .project-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-8px);
     background-color: #2c2c31;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* --- Animação de Revelação --- */
+/* --- Animação de Revelação (definição única) --- */
 .reveal {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(28px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .reveal.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Garante que o hover dos cards funcione APÓS a revelação ser concluída */
+.reveal.visible.about-card:hover,
+.cards-column .reveal.visible:hover {
+    transform: translateY(-8px);
+}
+
+.reveal.visible.project-card:hover,
+.projects-grid .reveal.visible:hover {
+    transform: translateY(-8px);
 }
 
 /* --- Responsividade --- */
@@ -500,9 +495,9 @@ section {
 
 .contact-content {
     width: 100%;
-    padding: 3rem 1rem;
+    min-height: auto;
+    padding: 4rem 1rem 1.5rem;
     text-align: center;
-
 }
 
 .title-contact {
@@ -544,4 +539,31 @@ section {
     background-color: #f5f5f7;
     color: #1d1d1f;
     transform: scale(1.03);
+}
+
+.end-page {
+    min-height: auto;
+    padding: 1.5rem 1rem 2rem;
+    text-align: center;
+    color: #b3b3b7;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .reveal,
+    .reveal.visible {
+        opacity: 1;
+        transform: none;
+    }
 }

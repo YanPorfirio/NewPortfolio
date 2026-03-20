@@ -3,6 +3,8 @@
     if (window.__portfolioScriptInitialized) return;
     window.__portfolioScriptInitialized = true;
 
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    
     // Gerenciamento do Header no Scroll
     const nav = document.querySelector('nav');
     const scrollObserver = () => {
@@ -16,12 +18,30 @@
     // Garante que o estado do header já fique correto ao carregar a página.
     scrollObserver();
 
+    const scheduleIdle = window.requestIdleCallback
+        ? (cb) => window.requestIdleCallback(cb, { timeout: 1200 })
+        : (cb) => window.setTimeout(cb, 250);
+
+    const projectImages = document.querySelectorAll('.project-card img');
+    scheduleIdle(() => {
+        projectImages.forEach((img) => {
+            const decodeImage = () => {
+                if (typeof img.decode === 'function') {
+                    img.decode().catch(() => {});
+                }
+            };
+
+            if (img.complete) decodeImage();
+            else img.addEventListener('load', decodeImage, { once: true });
+        });
+    });
+
     // Reveal Animation com Intersection Observer (Mais performático)
     const reveals = document.querySelectorAll('.reveal');
     const showAll = () => reveals.forEach(el => el.classList.add('visible'));
 
     // Se não houver elementos ou se a API não existir, evita erro e mostra o conteúdo.
-    if (!('IntersectionObserver' in window) || !reveals.length) {
+    if (prefersReducedMotion || !('IntersectionObserver' in window) || !reveals.length) {
         showAll();
         return;
     }
