@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="public/imagens/logo.png" type="image/png">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="icon" href="/public/imagens/logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">   
     <title>Profile</title>
 </head>
 <body>
     <nav>
-        <a href="#" class="logo"><span>Yan.dev</span></a>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <i class="ri-menu-line" id="menu-icon"></i>
-        <a class="visit-btn" href="https://github.com/YanPorfirio" target="_blank">Visit Github</a>
+        <div class="nav-container">
+            <a href="#" class="logo"><span>Yan.dev</span></a>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a class="visit-btn" href="https://github.com/YanPorfirio" target="_blank">Visit Github</a>
+            </div>
+            <i class="ri-menu-line" id="menu-icon"></i>
+        </div>
     </nav>
 
     <header>
@@ -113,7 +117,7 @@
             <div class="projects-grid">
                 <div class="project-card reveal">
                     <div class="card-image-container">
-                        <img src="public/imagens/pawel-czerwinski-7FqOISWr5V0-unsplash.jpg" alt="Budget Simulator - A person using a calculator over documents." decoding="async">
+                        <img src="/public/imagens/pawel-czerwinski-7FqOISWr5V0-unsplash.jpg" alt="Budget Simulator - A person using a calculator over documents." decoding="async">
                     </div>
                     <div class="card-content">
                         <h3>Coming soon</h3>
@@ -128,7 +132,7 @@
                 </div>
                 <div class="project-card reveal">
                     <div class="card-image-container">
-                        <img src="public/imagens/pawel-czerwinski-7FqOISWr5V0-unsplash.jpg" alt="Projects Dashboard - A clean UI dashboard with purple accents, featuring graphs and user stats." decoding="async">
+                        <img src="/public/imagens/pawel-czerwinski-7FqOISWr5V0-unsplash.jpg" alt="Projects Dashboard - A clean UI dashboard with purple accents, featuring graphs and user stats." decoding="async">
                     </div>
                     <div class="card-content">
                         <h3>Coming soon</h3>
@@ -158,6 +162,6 @@
         <footer>Yan Porfirio @Copyright 2026</footer>
     </section> 
 
-    <script defer src="script.js"></script>
+    <script defer src="src/script.js"></script>
 </body>
 </html>
