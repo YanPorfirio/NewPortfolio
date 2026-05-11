@@ -6,13 +6,12 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/yan-barbosa-porfirio)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github)](https://github.com/YanPorfirio)
 
-### project URL: https://new-portfolio-delta-silk.vercel.app
-
 ---
 
 ## 🖥️ Preview
 
 > A clean, dark-themed portfolio designed to showcase projects and skills with smooth animations and a focus on user experience.
+
 ---
 
 ## ✨ About This Project
@@ -25,11 +24,11 @@ Every section — from the animated scroll reveals to the responsive layout — 
 
 ## 🚀 Featured Projects
 
-| Project | Description | Stack |
-|---|---|---|
-| **Budget Simulator** | Interactive tool that calculates project costs based on user specs | React, TypeScript, Tailwind |
-| **Project Dashboard** | Analytics panel with metrics and performance indicators | Next.js, Chart.js, API |
-| **Kanban Board** | Task management with drag & drop and real-time view | React, TypeScript, Tailwind |
+| Project               | Description                                                        | Stack                       |
+| --------------------- | ------------------------------------------------------------------ | --------------------------- |
+| **Budget Simulator**  | Interactive tool that calculates project costs based on user specs | React, TypeScript, Tailwind |
+| **Project Dashboard** | Analytics panel with metrics and performance indicators            | Next.js, Chart.js, API      |
+| **Kanban Board**      | Task management with drag & drop and real-time view                | React, TypeScript, Tailwind |
 
 ---
 
@@ -40,6 +39,7 @@ HTML5 · CSS3 · JavaScript (ES6+)
 ```
 
 **Highlights:**
+
 - Vanilla JS `IntersectionObserver` for scroll-triggered animations
 - CSS Grid & Flexbox for fully responsive layout
 - No frameworks — just clean, semantic HTML and modular CSS
@@ -89,4 +89,4 @@ I'm currently open to new opportunities. If you'd like to work together or just 
 
 ---
 
-*Made with focus and ☕ by **Yan Porfirio***
+\*Made with focus and ☕ by **Yan Porfirio\***
