@@ -6,6 +6,8 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/yan-barbosa-porfirio)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github)](https://github.com/YanPorfirio)
 
+**Project URL:** [https://new-portfolio-delta-silk.vercel.app](https://new-portfolio-delta-silk.vercel.app)
+
 ---
 
 ## 🖥️ Preview
