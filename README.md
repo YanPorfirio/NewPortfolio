@@ -2,7 +2,7 @@
 
 ### Front-End Developer crafting elegant digital experiences
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-View%20Portfolio-black?style=for-the-badge&logo=vercel)](https://new-portfolio-delta-silk.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-View%20Portfolio-black?style=for-the-badge&logo=vercel)](https://new-portfolio-tau-ten.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/yan-barbosa-porfirio)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github)](https://github.com/YanPorfirio)
 
@@ -89,4 +89,4 @@ I'm currently open to new opportunities. If you'd like to work together or just 
 
 ---
 
-\*Made with focus and ☕ by **Yan Porfirio\***
+*Made with focus and ☕ by* **Yan Porfirio**
