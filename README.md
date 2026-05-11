@@ -13,7 +13,6 @@
 ## 🖥️ Preview
 
 > A clean, dark-themed portfolio designed to showcase projects and skills with smooth animations and a focus on user experience.
-
 ---
 
 ## ✨ About This Project
