@@ -89,4 +89,4 @@ I'm currently open to new opportunities. If you'd like to work together or just 
 
 ---
 
-\*Made with focus and ☕ by **Yan Porfirio\***
+*Made with focus and ☕ by* **Yan Porfirio**
