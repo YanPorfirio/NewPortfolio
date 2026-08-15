@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* --- Base --- */
 html, body {
   margin: 0 !important;
   width: 100%;
@@ -30,6 +31,20 @@ body.menu-open {
     outline-offset: 2px;
 }
 
+section {
+    min-height: 100vh;
+    padding: 10rem 0;
+    width: 100%;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* --- Nav --- */
 nav {
     position: fixed;
     top: 0;
@@ -127,7 +142,7 @@ li a:hover::before {
     transform: translateY(0);
     box-shadow: 0 4px 15px rgba(0, 113, 227, 0.3);
     filter: brightness(1.1);
-}   
+}
 
 #menu-icon {
     display: none;
@@ -183,7 +198,6 @@ li a:hover::before {
         transform: translateX(8px);
     }
 
-    /* Ajuste do pseudo-elemento de underline para o mobile */
     .nav-links li a::before {
         top: auto;
         bottom: -8px;
@@ -210,27 +224,21 @@ li a:hover::before {
     }
 }
 
-section {
-    min-height: 100vh;
-    padding: 10rem 0;
+/* --- Header / Home --- */
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    position: relative;
 }
 
-.about {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.about .about-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10rem
-}
-
-.info-box {
+.home-box {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -240,112 +248,102 @@ section {
     margin-top: 9rem;
 }
 
-.info-box h3 {
+.home-box .text h3 {
     font-size: 1.8rem;
     font-weight: 500;
     opacity: 0.8;
 }
 
-.info-box h1 {
+.home-box .text h1 {
     font-size: 4rem;
     font-weight: 600;
 }
 
-.info-box span {
+.home-box .full-stack {
     background-clip: text;
     color: white;
     font-size: 2rem;
 }
 
-.sociais {
+.home-sociais {
     display: flex;
     gap: 2rem;
 }
 
-.sociais a {
+.home-sociais a {
     font-size: 2.5rem;
     cursor: pointer;
     transition: 0.2s ease-in-out;
     color: #f5f5f7;
 }
 
-.sociais a:hover {
+.home-sociais a:hover {
     transform: scale(1.1);
 }
 
 @media (max-width: 600px) {
-    .info-box h3 {
+    .home-box .text h3 {
         font-size: 1.4rem;
     }
-    .info-box h1 {
+
+    .home-box .text h1 {
         font-size: 2.8rem;
     }
-    .info-box span {
+
+    .home-box .full-stack {
         font-size: 1.5rem;
     }
-    .sociais a {
+
+    .home-sociais a {
         font-size: 2rem;
     }
 }
 
-.section-title {
-    text-align: center;
-    font-size: 4rem;
-    font-weight: 600;
-    margin-bottom: 3rem;
-}
-
-/* ... (estilos globais e de nav, header) ... */
-
-/* --- Título da seção (centralizado) --- */
-.title-experience {
+/* --- About --- */
+.about-section .title-about {
     font-size: 50px;
-    font-weight: 500; 
-    margin-bottom: 4rem; /* Espaço para o grid */
+    font-weight: 500;
+    margin-bottom: 4rem;
 }
 
-/* --- Layout Principal (Grid de 2 Colunas) --- */
-.experience-layout {
+.about-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
-    gap: 4rem; /* Espaço entre as colunas */
-    align-items: start; /* Alinha o conteúdo ao topo */
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
 }
 
-/* --- Coluna da Esquerda (Texto) --- */
 .text-column {
     display: flex;
     flex-direction: column;
 }
 
-.description {
+.about-description {
     font-size: 1.1rem;
     color: #b3b3b7;
     line-height: 1.6;
-    margin-bottom: 2rem; /* Espaço entre parágrafos */
+    margin-bottom: 2rem;
 }
 
-/* --- Estatísticas --- */
-.stats-container {
+.about-stats-container {
     display: flex;
-    gap: 3rem; /* Espaço entre os itens */
+    gap: 3rem;
     margin-top: 2rem;
 }
 
-.stat-item h3 {
+.about-stat-item h3 {
     font-size: 3rem;
     font-weight: 600;
     color: #f5f5f7;
     margin-bottom: 0.5rem;
 }
 
-.stat-item p {
+.about-stat-item p {
     font-size: 1rem;
     color: #b3b3b7;
 }
 
-/* --- Estilo dos Cartões --- */
-.cards-column {
+.about-cards-column {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
@@ -372,68 +370,59 @@ section {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
-/* Ícone */
 .about-card i {
     font-size: 2.2rem;
     background: linear-gradient(135deg, #0071e3, #00c2ff);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1.5rem;
     display: inline-block;
 }
 
-/* Conteúdo do Cartão - experience */
-.experience-section .card-content h4 {
+.about-card .card-content h4,
+.about-card .about-card-content h4 {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
     color: #f5f5f7;
 }
 
-.experience-section .card-content p {
+.about-card .card-content p,
+.about-card .about-card-content p {
     font-size: 0.95rem;
     color: #86868b;
     line-height: 1.4;
-    margin: 0   ;
+    margin: 0;
 }
 
-/* --- Animação de Revelação --- */
-/* Definição única centralizada abaixo, perto dos estilos de projects */
-
-/* --- Responsividade --- */
 @media (max-width: 968px) {
-    .experience-layout {
-        grid-template-columns: 1fr; /* Empilha as colunas em tablets/celulares */
+    .about-layout {
+        grid-template-columns: 1fr;
         gap: 3rem;
     }
 
-    .title-experience {
+    .about-section .title-about {
         margin-bottom: 3rem;
     }
 
-    .stats-container {
-        justify-content: center; /* Centraliza as estatísticas */
+    .about-stats-container {
+        justify-content: center;
     }
 }
 
 @media (max-width: 600px) {
-    .cards-column {
-        grid-template-columns: 1fr; /* Empilha os cartões em celulares menores */
+    .about-cards-column {
+        grid-template-columns: 1fr;
     }
 
-    .stat-item h3 {
+    .about-stat-item h3 {
         font-size: 2.5rem;
     }
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-/* --- Seção Projects --- */
+/* --- Projects --- */
 .projects-section {
-    padding: 8rem 0; /* Espaçamento vertical generoso */
+    padding: 8rem 0;
 }
 
 .section-header {
@@ -456,7 +445,6 @@ section {
     max-width: 700px;
 }
 
-/* --- Grid de Projetos --- */
 .projects-grid {
     gap: 0;
     display: grid;
@@ -465,7 +453,6 @@ section {
     justify-content: center;
 }
 
-/* --- Estilo dos Cards --- */
 .project-card {
     background: rgba(255, 255, 255, 0.03);
     border-radius: 1.4rem;
@@ -495,20 +482,12 @@ section {
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Estilo específico para a imagem do dashboard (fundo claro) */
-.dashboard-image img {
-    background-color: #f5f5f7; /* Cor de fundo clara para o dashboard */
-    padding: 2rem; /* Espaçamento interno */
-    object-fit: contain; /* Mostra a imagem inteira sem cortar */
-}
-
-/* Conteúdo do Card - projects */
 .project-card .card-content {
-    padding: 2.5rem; /* Padding generoso */
+    padding: 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-grow: 1; /* Faz o conteúdo crescer para preencher o card */
+    flex-grow: 1;
 }
 
 .project-card .card-content h3 {
@@ -524,7 +503,6 @@ section {
     margin-bottom: 2rem;
 }
 
-/* Tags de Tecnologia */
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -532,15 +510,14 @@ section {
 }
 
 .tag {
-    background-color: rgba(255, 255, 255, 0.08); /* Fundo sutil */
+    background-color: rgba(255, 255, 255, 0.08);
     color: #b3b3b7;
     padding: 0.6rem 1.2rem;
-    border-radius: 3rem; /* Bordas arredondadas (pílula) */
+    border-radius: 3rem;
     font-size: 0.9rem;
     font-weight: 500;
 }
 
-/* Hover nos Cards */
 .project-card:hover {
     transform: translateY(-10px);
     background: rgba(255, 255, 255, 0.05);
@@ -552,37 +529,13 @@ section {
     transform: scale(1.05);
 }
 
-/* --- Animação de Revelação (definição única) --- */
-.reveal {
-    opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Garante que o hover dos cards funcione APÓS a revelação ser concluída */
-.reveal.visible.about-card:hover,
-.cards-column .reveal.visible:hover {
-    transform: translateY(-8px);
-}
-
-.reveal.visible.project-card:hover,
-.projects-grid .reveal.visible:hover {
-    transform: translateY(-8px);
-}
-
-/* --- Responsividade --- */
 @media (max-width: 968px) {
     .section-title {
         font-size: 3rem;
     }
 
     .projects-grid {
-        grid-template-columns: 1fr; /* Empilha os cards em uma coluna */
+        grid-template-columns: 1fr;
         gap: 2rem;
     }
 
@@ -606,6 +559,7 @@ section {
     }
 }
 
+/* --- Contact --- */
 .contact-content {
     width: 100%;
     min-height: auto;
@@ -623,7 +577,7 @@ section {
     margin-top: 4rem;
 }
 
-.contact p {
+.contact .sub-title {
     margin-top: 1rem;
     font-size: 1.5rem;
     color: #d9d9db;
@@ -642,9 +596,8 @@ section {
     color: #f5f5f7;
     background-color: #1d1d1f;
     cursor: pointer;
-
-    transition: background-color 0.3s ease, 
-                transform 0.2s ease, 
+    transition: background-color 0.3s ease,
+                transform 0.2s ease,
                 color 0.3s ease;
 }
 
@@ -654,12 +607,35 @@ section {
     transform: scale(1.03);
 }
 
+/* --- Footer --- */
 .end-page {
     min-height: auto;
     padding: 1.5rem 1rem 2rem;
     text-align: center;
     color: #b3b3b7;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* --- Reveal Animation --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal.visible.about-card:hover,
+.about-cards-column .reveal.visible:hover {
+    transform: translateY(-8px);
+}
+
+.reveal.visible.project-card:hover,
+.projects-grid .reveal.visible:hover {
+    transform: translateY(-8px);
 }
 
 @media (prefers-reduced-motion: reduce) {
