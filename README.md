@@ -1,6 +1,6 @@
 # ✦ Yan Porfirio — Personal Portfolio
 
-### Front-End Developer crafting elegant digital experiences
+### Full-Stack Developer crafting elegant digital experiences
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-View%20Portfolio-black?style=for-the-badge&logo=vercel)](https://new-portfolio-tau-ten.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/yan-barbosa-porfirio)
