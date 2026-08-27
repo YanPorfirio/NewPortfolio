@@ -22,16 +22,6 @@ Every section — from the animated scroll reveals to the responsive layout — 
 
 ---
 
-## 🚀 Featured Projects
-
-| Project               | Description                                                        | Stack                       |
-| --------------------- | ------------------------------------------------------------------ | --------------------------- |
-| **Budget Simulator**  | Interactive tool that calculates project costs based on user specs | React, TypeScript, Tailwind |
-| **Project Dashboard** | Analytics panel with metrics and performance indicators            | Next.js, Chart.js, API      |
-| **Kanban Board**      | Task management with drag & drop and real-time view                | React, TypeScript, Tailwind |
-
----
-
 ## 🛠️ Tech Stack
 
 ```
