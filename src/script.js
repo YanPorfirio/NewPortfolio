@@ -102,4 +102,31 @@
             }
         });
     });
+
+    // Theme Switcher Logic
+    const themeDots = document.querySelectorAll('.theme-dot');
+    const setTheme = (theme) => {
+        if (theme === 'midnight') {
+            document.documentElement.removeAttribute('data-theme');
+        } else {
+            document.documentElement.setAttribute('data-theme', theme);
+        }
+        localStorage.setItem('portfolio-theme', theme);
+        
+        themeDots.forEach(dot => {
+            if (dot.getAttribute('data-theme') === theme) dot.classList.add('active');
+            else dot.classList.remove('active');
+        });
+    };
+
+    themeDots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            const theme = dot.getAttribute('data-theme');
+            setTheme(theme);
+        });
+    });
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('portfolio-theme') || 'midnight';
+    setTheme(savedTheme);
 })();
