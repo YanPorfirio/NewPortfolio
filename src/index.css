@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: var(--theme-primary);
+  --color-surface: var(--theme-surface);
+  --color-surface-raised: var(--theme-surface-raised);
+  --color-surface-card: var(--theme-surface-card);
+  --color-surface-card-hover: rgba(255, 255, 255, 0.05);
+  --color-navigation: var(--theme-navigation);
+  --color-nav-link-mobile: rgba(255, 255, 255, 0.8);
+  --color-text: var(--theme-text);
+  --color-muted: var(--theme-muted);
+  --color-subtle: #86868b;
+  --color-contact: #d9d9db;
+  --color-border: var(--theme-border);
+  --color-accent: #ffffff;
+  --color-accent-muted: #a1a1a6;
+
+  --font-sans: 'Poppins', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  --font-weight-light: 300;
+  --font-weight-body: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --text-tag: 0.8rem;
+  --text-caption: 0.9rem;
+  --text-caption-lg: 0.95rem;
+  --text-body: 1rem;
+  --text-table: 1.05rem;
+  --text-body-lg: 1.1rem;
+  --text-button: 1.2rem;
+  --text-card-title: 1.3rem;
+  --text-subtitle: 1.4rem;
+  --text-heading-xs: 1.5rem;
+  --text-nav-mobile: 1.6rem;
+  --text-heading-sm: 1.8rem;
+  --text-heading: 2rem;
+  --text-icon: 2.2rem;
+  --text-menu: 2rem;
+  --text-stat: 2.5rem;
+  --text-display-compact: 2.8rem;
+  --text-heading-md: 3rem;
+  --text-heading-lg: 3.125rem;
+  --text-display: 5rem;
+  --tracking-label: 0.04em;
+  --tracking-heading: -0.02em;
+
+  --spacing-gutter: 2rem;
+  --spacing-section: 10rem;
+  --spacing-card: 2.5rem;
+  --spacing-stack-xs: 0.5rem;
+  --spacing-stack-compact: 0.8rem;
+  --spacing-stack-sm: 1rem;
+  --spacing-stack-control: 1.2rem;
+  --spacing-stack-table: 1.4rem;
+  --spacing-stack-md: 1.5rem;
+  --spacing-stack-button: 1.8rem;
+  --spacing-stack-lg: 2rem;
+  --spacing-stack-xl: 3rem;
+  --spacing-stack-2xl: 4rem;
+  --spacing-about-card-min: 17.5rem;
+  --spacing-project-card-min: 31.25rem;
+  --spacing-project-card-max: 30.625rem;
+  --spacing-project-image: 20rem;
+  --spacing-section-copy: 43.75rem;
+  --spacing-button-primary-x: 1.8rem;
+  --spacing-button-primary-y: 0.8rem;
+  --spacing-button-secondary-x: 1.5rem;
+  --spacing-button-secondary-y: 0.9rem;
+  --spacing-badge-x: 1.2rem;
+  --spacing-badge-y: 0.6rem;
+  --spacing-button-lift: 0.125rem;
+  --spacing-card-lift: 0.5rem;
+  --spacing-project-card-lift: 0.625rem;
+  --spacing-nav-y: 1.5rem;
+  --spacing-nav-scrolled-y: 1rem;
+  --spacing-nav-gap: 4rem;
+  --spacing-mobile-menu-gap: 3rem;
+  --spacing-mobile-menu-max: 20rem;
+  --spacing-nav-underline-top: 1.5625rem;
+  --spacing-nav-underline-bottom: 0.5rem;
+  --spacing-nav-link-lift: 0.5rem;
+
+  --radius-underline: 1rem;
+  --radius-nav-indicator: 10px;
+  --radius-card: 1.5rem;
+  --radius-project-card: 1.4rem;
+  --radius-tag: 3rem;
+  --radius-pill: 100px;
+
+  --shadow-button: 0 4px 15px rgba(255, 255, 255, 0.1);
+  --shadow-button-hover: 0 6px 20px rgba(255, 255, 255, 0.1);
+  --shadow-card: 0 15px 30px rgba(0, 0, 0, 0.4);
+  --shadow-card-lg: 0 20px 40px rgba(0, 0, 0, 0.4);
+  --shadow-menu: -20px 0 50px rgba(0, 0, 0, 0.5);
+
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --scale-button-hover: 1.03;
+  --duration-navigation: 400ms;
+  --blur-navigation: 20px;
+  --breakpoint-mobile: 37.5rem;
+  --breakpoint-tablet: 60.5rem;
+  --container-portfolio: 75rem;
+  --z-index-menu: 999;
+  --z-index-header: 1000;
+  --z-index-menu-toggle: 1001;
+}
+
+/* Tailwind has no theme namespace for a named transition duration utility. */
+@utility duration-navigation {
+  transition-duration: var(--duration-navigation);
+}
+
+:root {
+  --theme-primary: #ffffff;
+  --theme-surface: #000000;
+  --theme-surface-raised: #0a0a0a;
+  --theme-surface-card: rgba(255, 255, 255, 0.03);
+  --theme-text: #ffffff;
+  --theme-muted: #f5f5f7;
+  --theme-border: rgba(255, 255, 255, 0.08);
+  --theme-navigation: rgba(0, 0, 0, 0.8);
+  --accent-gradient: linear-gradient(90deg, #ffffff, #a1a1a6);
+}
+
+[data-theme='matte'] {
+  --theme-surface: #121212;
+  --theme-surface-raised: #1c1c1e;
+  --theme-surface-card: rgba(255, 255, 255, 0.05);
+  --theme-navigation: rgba(18, 18, 18, 0.8);
+}
+
+[data-theme='contrast'] {
+  --theme-surface: #000000;
+  --theme-surface-raised: #000000;
+  --theme-surface-card: #1c1c1e;
+  --theme-muted: #ffffff;
+  --theme-border: #ffffff;
+  --theme-navigation: rgba(0, 0, 0, 0.95);
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background-color: var(--theme-surface);
+  color: var(--theme-text);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+/* State is rendered by Header so the mobile menu can lock page scrolling without DOM mutation. */
+body:has([data-mobile-menu-open='true']) {
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: var(--theme-text);
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--theme-text);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
